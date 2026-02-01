@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MoneyQuest Kids</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app" id="app">
+
+    <header class="header">
+      <h1>💰 MoneyQuest Kids</h1>
+      <p class="subtitle">Helping kids build real-world money confidence</p>
+
+      <!-- ACCESSIBILITY CONTROLS -->
+      <div class="accessibility">
+        <button onclick="toggleContrast()">🌗 Contrast</button>
+        <button onclick="changeTextSize(1)">A+</button>
+        <button onclick="changeTextSize(-1)">A−</button>
+      </div>
+    </header>
+
+    <!-- PROGRESS -->
+    <div class="progress-container">
+      <div id="progressBar"></div>
+    </div>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stat">
+        <span class="label">Money</span>
+        <span class="value">💰 $<span id="money">20</span></span>
+      </div>
+
+      <div class="stat">
+        <span class="label">Chapter</span>
+        <span class="value">📖 <span id="level">1</span></span>
+      </div>
+
+      <div class="stat">
+        <span class="label">Achievements</span>
+        <span class="value" id="badges">None</span>
+      </div>
+
+      <div class="stat">
+        <span class="label">Skills</span>
+        <span class="value" id="upgrades">None</span>
+      </div>
+    </section>
+
+    <!-- GAME -->
+    <main class="card">
+
+      <!-- WELCOME -->
+      <div id="welcomeScreen">
+        <h2>👋 Welcome Adventurer!</h2>
+        <p>What’s your name?</p>
+        <input type="text" id="nameInput" placeholder="Your name..." />
+        <br /><br />
+        <button class="primary" onclick="startGame()">Start Journey 🚀</button>
+      </div>
+
+      <!-- GAMEPLAY -->
+      <div id="gameContent" style="display:none;">
+        <div id="placeTag" class="place-tag"></div>
+        <div id="story" class="story"></div>
+        <div id="choices" class="choices"></div>
+        <div id="lesson" class="lesson"></div>
+        <div class="actions">
+          <button class="secondary" onclick="resetGame()">Restart</button>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <small>Built for kids learning money confidence 💛</small>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
